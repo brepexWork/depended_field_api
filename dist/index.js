@@ -13,9 +13,15 @@ let corsOptions = {
     optionsSuccessStatus: 200
 };
 app.use((0, cors_1.default)());
-const port = 2525;
+const port = 7575;
 app.use(jsonBodyMiddleWare);
 app.use(create_route_1.default);
+app.get('/', (req, res) => {
+    res.send('hello');
+});
+app.get('/test', (req, res) => {
+    res.send('hello');
+});
 app.listen(port, () => {
     console.log('Server success starter in port : ' + port);
 });
