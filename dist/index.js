@@ -13,7 +13,7 @@ let corsOptions = {
     optionsSuccessStatus: 200
 };
 app.use((0, cors_1.default)());
-const port = 7575;
+const port = 3005;
 app.use(jsonBodyMiddleWare);
 app.use(create_route_1.default);
 app.get('/', (req, res) => {
